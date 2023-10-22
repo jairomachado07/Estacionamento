@@ -1,25 +1,4 @@
-package Estacionamento;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
-public class EstacionamentoApplication {
-
-    public static void main(String[] args) {
-        SpringApplication.run(EstacionamentoApplication.class, args);
-    }
-
-    @Autowired
-    private Estacionamento estacionamento;
-
-    public void calcularTarifa(Carro carro) {
-        int horasEstacionado = carro.getHorasEstacionado();
-        Tarifa tarifa = estacionamento.getTarifa(horasEstacionado);
-        System.out.println("Tarifa: " + tarifa.getValor());
-    }
-}
+package com.example.estacionamento;
 
 class Estacionamento {
 
